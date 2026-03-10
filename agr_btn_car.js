@@ -66,7 +66,7 @@ function comprar() {
     }
 
     // Crear mensaje para WhatsApp
-    const numero = '528231094576';//"5218231107126"; // +52 826 169 71 82
+    const numero = '5218231107126'; // +52 826 169 71 82
     let mensaje = " *Pedido*\n\n ";
     let total = 0;
 
