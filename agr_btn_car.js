@@ -66,6 +66,7 @@ function comprar() {
     }
 
     // Crear mensaje para WhatsApp
+    const numero = '528231094576';//"5218231107126"; // +52 826 169 71 82
     let mensaje = " *Pedido*\n\n ";
     let total = 0;
 
@@ -79,10 +80,9 @@ function comprar() {
 
 
     // Enviar a WhatsApp
-    const numero = "+52 1 823 110 7126"; // +52 826 169 71 82
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank"); 
-
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    const url = `https://wa.me/${numero}?text=${mensajeCodificado}`;
+    
     // Para ISO
     const isISO = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     if (isISO){
@@ -97,6 +97,8 @@ function comprar() {
 
     // Mostrar mensaje de confirmación
     const mensajeCompra = document.getElementById("mensaje-compra");
-    mensajeCompra.style.display = "block";
-    setTimeout(() => mensajeCompra.style.display = "none", 2500);
+    if (mensajeCompra) {
+        mensajeCompra.style.display = "block";
+        setTimeout(() => mensajeCompra.style.display = "none", 2500);
+    }
 }
