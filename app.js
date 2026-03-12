@@ -197,21 +197,57 @@ const productos = [
 
   {
     nombre: "Agua Natural",
-    precio: 25,
+    precio: 50,
     imagen: "./jpg/bebida2.jpg",
-    categoria: "entrada"
+    categoria: "bebida"
   },
   {
     nombre: "Coca-Cola",
-    precio: 23,
+    precio: 35,
     imagen: "./jpg/bebida3.jpg",
-    categoria: "entrada"
+    categoria: "bebida"
   },
   {
-    nombre: "Bebida",
-    precio: 23,
+    nombre: "Coca-Cola 2L",
+    precio: 55,
+    imagen: "./jpg/bebida3.jpg",
+    categoria: "bebida"
+  },
+  {
+    nombre: "Jumex",
+    precio: 25,
     imagen: "./jpg/bebida1.jpg",
-    categoria: "entrada"
+    categoria: "bebida"
+  },
+  {
+    nombre: "Power",
+    precio: 35,
+    imagen: "./jpg/bebida1.jpg",
+    categoria: "bebida"
+  },
+  {
+    nombre: "Tea",
+    precio: 35,
+    imagen: "./jpg/bebida1.jpg",
+    categoria: "bebida"
+  },
+  {
+    nombre: "Cafe",
+    precio: 50,
+    imagen: "./jpg/bebida1.jpg",
+    categoria: "bebida"
+  },
+  {
+    nombre: "Jugos Vida",
+    precio: 20,
+    imagen: "./jpg/bebida1.jpg",
+    categoria: "bebida"
+  },
+    {
+    nombre: "Malteada",
+    precio: 75,
+    imagen: "./jpg/bebida1.jpg",
+    categoria: "bebida"
   },
 ];
 
@@ -235,9 +271,11 @@ function crearCard(producto) {
 function renderMenu() {
   const principal = document.getElementById("menu-principal");
   const entradas = document.getElementById("menu-entradas");
+  const bebida = document.getElementById("menu-bebidas");
 
   console.log("principal:", principal);
   console.log("entradas:", entradas);
+  console.log("bebida:", bebida);
 
   productos.forEach(prod => {
     if (prod.categoria === "principal") {
